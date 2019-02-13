@@ -1,7 +1,7 @@
 {
   "name": "clockify-to-eurotime",
   "description": "Script to convert clockify details csv export to eurotime format",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "keywords": [
     "eurotime",
     "clockify"
