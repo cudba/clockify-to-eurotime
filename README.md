@@ -1,4 +1,7 @@
 # clockify to eurotime 
+Takes a csv export from a [clockify details report](https://clockify.me/help/reports/detailed-report) and transforms it into a convenient format to enter in eurotime.
+
+Times are tab - seperated, so you might be able to past them directly.
 
 ## usage
 ``
