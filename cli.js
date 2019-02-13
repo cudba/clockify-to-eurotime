@@ -1,28 +1,9 @@
-import Papa from 'papaparse';
-import {writeFileSync, readFileSync} from 'fs';
-import moment from 'moment'
+#!/usr/bin/env node
+const fs = require('fs')
+const Papa = require('papaparse')
+const moment = require('moment')
 
 const args = process.argv
-
-const foo = {
-    User: 'Curdin Barandun',
-    Email: 'cbarandun@gmail.com',
-    Client: 'Bonfire',
-    Project: 'Insidelabs MatterhornApp',
-    Task: '',
-    Description: 'Shop: Provide user infos in skidata orders (DTA)',
-    Billable: 'Yes',
-    'Start date': '02/13/2019',
-    'Start time': '16:19',
-    'End date': '02/13/2019',
-    'End time': '16:58',
-    'Duration (h)': '00:39:11',
-    'Duration (decimal)': '0.65',
-    Tags: '[MA] Mobile App,[MA] Sprint 1.5',
-    'Hourly rate': '0',
-    'Amount (USD)': '0',
-    '': ''
-}
 
 if (args.length !== 3) {
     console.log('Invalid arguments length')
@@ -32,7 +13,7 @@ if (args.length !== 3) {
 const file = args[2];
 
 
-const clockifyCsv = readFileSync(file, {encoding: 'ucs2'});
+const clockifyCsv = fs.readFileSync(file, {encoding: 'ucs2'});
 
 const clockifyRows = Papa.parse(clockifyCsv, {header: true,})
 
@@ -61,6 +42,6 @@ const eurotimeOutput = Object.keys(reportPerDay).reduce((output, date) => {
 }, '')
 
 
-writeFileSync(process.cwd() + '/eurotime.txt', eurotimeOutput)
+fs.writeFileSync(process.cwd() + '/eurotime.txt', eurotimeOutput)
 
 process.exit(0)
