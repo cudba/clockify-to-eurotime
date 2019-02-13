@@ -1,0 +1,20 @@
+{
+  "name": "clockify-to-eurotime",
+  "description": "Script to convert clockify details csv export to eurotime format",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "homepage": "https://github.com/cudba/clockify-to-eurotime",
+  "author": {
+    "name": "Curdin Barandun",
+    "email": "cbarandun@gmail.com"
+  },
+  "devDependencies": {
+    "webpack": "^4.29.3",
+    "webpack-cli": "^3.2.3"
+  },
+  "dependencies": {
+    "moment": "^2.24.0",
+    "papaparse": "^4.6.3"
+  }
+}
