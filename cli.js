@@ -28,7 +28,15 @@ const reportPerDay = clockifyRows.data.reverse().reduce((perDay, row) => {
             duration: 0
         }
     }
-    perDay[startDate].times.push(startTime, endTime)
+    const times = perDay[startDate].times
+
+    // merge continuous time ranges
+    if(times.length && times[times.length - 1] === startTime) {
+        times.pop();
+        times.push(endTime)
+    }  else {
+        times.push(startTime, endTime)
+    }
     perDay[startDate].duration = perDay[startDate].duration + duration
     return perDay;
 }, {})
