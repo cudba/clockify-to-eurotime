@@ -15,12 +15,19 @@ E.g.
 
 Times are tab - seperated, so you might be able to past them directly.
 
+**Important!**  
+ In order to work properly, set date & time settings in  Clockify [Personal Settings](https://clockify.me/user/settings) to *MM/DD/YYYY* and *Time Format* to *24-hours*
+ 
+![date date settings](https://www.dropbox.com/s/849qdsuonpase5w/time_settings.png?raw=1)
+
 ## Usage
 ``
 $ npx clockify-to-eurotime <clockfy-export.csv>
 ``
 
 Outputs results to `<cwd>/eurotime.txt`
+
+**Important:**
 
 ## Issues
 Does not account for working over midnight, the end date will still be appended to the day the work period started.
