@@ -27,7 +27,5 @@ $ npx clockify-to-eurotime <clockfy-export.csv>
 
 Outputs results to `<cwd>/eurotime.txt`
 
-**Important:**
-
 ## Issues
 Does not account for working over midnight, the end date will still be appended to the day the work period started.
